@@ -86,5 +86,7 @@ body {
 
 #root div:hover {
   transform: rotate(360deg);
+  border: 5px solid #80cbc4;
+  color: #009688;
   line-height: 50px;
 }
