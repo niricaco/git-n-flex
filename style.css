@@ -73,9 +73,9 @@ body {
 }
 
 #root div {
-  width: 150px;
-  height: 150px;
-  margin: 10px;
+  width: 140px;
+  height: 140px;
+  margin: 15px;
   padding: 10px;
   border: 5px solid #4db6ac;
   border-radius: 15%;
