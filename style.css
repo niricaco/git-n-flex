@@ -47,13 +47,44 @@ select {
   -webkit-appearance: none !important;
 }
 
+/* https://www.materialpalette.com/colors */
+
+body {
+  background: #c0ca33;
+
+  color: #4db6ac;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: end;
+  vertical-align: middle;
+  line-height: 150px;
+}
+
 #root {
   display: flex;
   /* csak kozvetlen child orokli */
-  flex-wrap: wrap;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+  
+  width: 100%;
+  min-height: 50vh;
+  padding: 15px;
+}
 
-  height: 100vh;
+#root div {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid #4db6ac;
+  border-radius: 15%;
+  
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+
+#root div:hover {
+  transform: rotate(360deg);
+  line-height: 50px;
 }

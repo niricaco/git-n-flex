@@ -17,46 +17,27 @@ ______
 */
 
 const zerosNumbers = function (amount) {
-  let returnArray = [];
-  
-  console.log("returnArray =", returnArray);
+  const returnArray = [];
   
   amount = parseInt(amount);
 
-  console.log("amount =", amount);
-
   if (!Number.isNaN(amount)) {
-    for (let i = 0; i < amount; i++) {
-
-      console.log("i =", i);
-
+    for (let i = 1; i < amount + 1; i++) {
       if (String(i).length < String(amount).length) {
-
-        console.log("String(i).length =", String(i).length, "<", "String(amount).length =", String(amount).length);
-
-        const difference = String(amount).length - String(i).length + 1;
-
-        console.log("difference =", difference);
-
-        let padded = String(i).padStart(difference, "0");
-
-        console.log("padded =", padded);
-        console.log("typeof padded =", typeof padded);
-
-
+        const padded = String(i).padStart((String(amount).length), "0");
         returnArray.push(`${padded}`);
-
-        console.log(returnArray);
+        console.log(padded);
       } else {
         returnArray.push(`${i}`);
-
-        console.log(returnArray);
       }
     }
   } else {
     returnArray.push("error");
   }
+  return returnArray;
 }
+
+//repeat
 
 const generateArray = function (amount) {
   let returnArray = [];
@@ -95,8 +76,20 @@ const loadEvent = function () {
   */
 
   const root = document.getElementById("root");
-  const zeros = zerosNumbers(101);
+  const zeros = zerosNumbers(100);
   const list = generateArray(0);
+
+  console.log(zeros);
+  console.log(typeof zeros);
+  
+  if (zeros[0] !== "error") {
+    for (const item of zeros) {
+      root.insertAdjacentHTML("beforeend", `<div>${item}</div>`);
+    }
+  }
+  
+  console.log(list);
+  console.log(typeof list);
 
   if (list[0] !== "error") {
     for (const item of list) {
@@ -120,3 +113,9 @@ window.addEventListener("load", () => {
 
 //https://www.w3schools.com/jsref/jsref_splice.asp
 //Metodus pont van elotte es zarojel a vege.
+/* 
+http://www.flexboxdefense.com/
+flexbox.io
+https://bennettfeely.com/flexplorer/
+https://flexbox.help/
+ */
