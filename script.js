@@ -76,7 +76,7 @@ const loadEvent = function () {
   */
 
   const root = document.getElementById("root");
-  const zeros = zerosNumbers(100);
+  const zeros = zerosNumbers(1000);
   const list = generateArray(0);
 
   console.log(zeros);
